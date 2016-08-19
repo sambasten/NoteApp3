@@ -3,26 +3,6 @@ var expect = require('chai').expect;
 
 
 
-//Section for toGet method
-describe("The toGet function ", function() {
-
-  it("should not accept strings only integers", function() {
-    var getId = new noteapp3('Samuel');
-    expect(getId.toGet("any string")).to.equal("Strings are not valid Input");
-  });
-
-it("should return the content of a note array given the index ", function(){
-  before(function(){
-    var getId = new noteapp3("Samuel");
-    getId.create("harry");
-	expect(getId.toGet(0)).to.equal("harry");
-  });
-
-  });
-
-});
-
-
 //Section for create method
 
 describe("The create content function", function() {
@@ -31,6 +11,8 @@ describe("The create content function", function() {
     expect(getContent.create(" ")).to.equal("Cannot accept empty inputs");
   });
 });
+
+
 
 
 //Section for list method
@@ -44,6 +26,25 @@ describe("The list function lists content of noteList ", function() {
       expect(getList.list(0)).to.equal("JK Rowling");
       expect(getList.list(0)).to.equal("ListFxnTest");
     });
+
+  });
+
+});
+
+//Section for toGet method
+describe("The toGet function ", function() {
+
+  it("should not accept strings only integers", function() {
+    var getId = new noteapp3('Samuel');
+    expect(getId.toGet("any string")).to.equal("Strings are not valid Input");
+  });
+
+it("should return the content of a note array given the index ", function(){
+  before(function(){
+    var getId = new noteapp3("Samuel");
+    getId.create("harry");
+  expect(getId.toGet(0)).to.equal("harry");
+  });
 
   });
 

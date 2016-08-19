@@ -6,8 +6,13 @@ function NotesApplication(author){
 * adds to the note list object
 */
     this.create = function (note_content) {
-	  	this.noteList.push(note_content);
-		return this.noteList;
+    	if(note_content == ' ')
+    		{ 
+    			return'Empty strings not allowed'
+    		}
+	  	else{
+	  		this.noteList.push(note_content);}
+		
 };
 
 /** function to list out notes in noteList
@@ -23,8 +28,8 @@ function NotesApplication(author){
 *return the content of that index as a string
 */
 	this.toGet = function(note_id){
-	if(this.noteList.length === 0){
-		return  'No ID to get from empty list';
+	if(!this.noteList[note_id]){
+		return  'not valid, enter an integer';
 	}
 	return this.noteList[note_id];
 };
