@@ -1,11 +1,11 @@
 function NotesApplication(author){
 	this.author = author;
-	this.noteList = [];
+	this.noteList = [];	
 
 /** Fuction to takes note content and 
 * adds to the note list object
 */
-	this.create = function (note_content) {
+    this.create = function (note_content) {
 	  	this.noteList.push(note_content);
 		return this.noteList;
 };
@@ -57,4 +57,6 @@ function NotesApplication(author){
 			return this.noteList; //return notelist
 };
 }
+
+
 module.exports = NotesApplication

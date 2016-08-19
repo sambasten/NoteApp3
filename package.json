@@ -1,0 +1,28 @@
+{
+  "name": "note-app",
+  "version": "1.0.0",
+  "description": "A simple note taking app",
+  "main": "noteapp2.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sambasten/NoteApp3.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "npm"
+  ],
+  "author": "Samuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sambasten/NoteApp3/issues"
+  },
+  "homepage": "https://github.com/sambasten/NoteApp3#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
